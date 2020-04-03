@@ -30,6 +30,8 @@
         {
             this.showButton = new System.Windows.Forms.Button();
             this.fruitsListBox = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.originalWordListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // showButton
@@ -46,21 +48,44 @@
             // 
             this.fruitsListBox.FormattingEnabled = true;
             this.fruitsListBox.ItemHeight = 16;
-            this.fruitsListBox.Location = new System.Drawing.Point(520, 181);
+            this.fruitsListBox.Location = new System.Drawing.Point(46, 262);
             this.fruitsListBox.Name = "fruitsListBox";
-            this.fruitsListBox.Size = new System.Drawing.Size(120, 84);
+            this.fruitsListBox.Size = new System.Drawing.Size(163, 84);
             this.fruitsListBox.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(43, 235);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "All Words in Lower-Case:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // originalWordListBox
+            // 
+            this.originalWordListBox.FormattingEnabled = true;
+            this.originalWordListBox.ItemHeight = 16;
+            this.originalWordListBox.Location = new System.Drawing.Point(46, 120);
+            this.originalWordListBox.Name = "originalWordListBox";
+            this.originalWordListBox.Size = new System.Drawing.Size(163, 100);
+            this.originalWordListBox.TabIndex = 3;
+            this.originalWordListBox.SelectedIndexChanged += new System.EventHandler(this.originalWordListBox_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.originalWordListBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.fruitsListBox);
             this.Controls.Add(this.showButton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -68,6 +93,8 @@
 
         private System.Windows.Forms.Button showButton;
         private System.Windows.Forms.ListBox fruitsListBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox originalWordListBox;
     }
 }
 

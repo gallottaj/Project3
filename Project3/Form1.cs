@@ -44,6 +44,36 @@ namespace Project3
             {
                 MessageBox.Show(ex.Message);
             }
+            try
+            {
+                string originalFruitName;
+                StreamReader inputFile;
+                inputFile = File.OpenText("fruitnames.txt");
+                originalWordListBox.Items.Clear();
+
+                while (!inputFile.EndOfStream)
+                {
+                    originalFruitName = inputFile.ReadLine();
+                    originalWordListBox.Items.Add(originalFruitName);
+                }
+
+                inputFile.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void originalWordListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+    
         }
     }
 }
