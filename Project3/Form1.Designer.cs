@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.originalWordListBox = new System.Windows.Forms.ListBox();
             this.sortedFruitListBox = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // showButton
@@ -78,17 +80,37 @@
             // 
             this.sortedFruitListBox.FormattingEnabled = true;
             this.sortedFruitListBox.ItemHeight = 16;
-            this.sortedFruitListBox.Location = new System.Drawing.Point(475, 120);
+            this.sortedFruitListBox.Location = new System.Drawing.Point(340, 120);
             this.sortedFruitListBox.Name = "sortedFruitListBox";
-            this.sortedFruitListBox.Size = new System.Drawing.Size(257, 84);
+            this.sortedFruitListBox.Size = new System.Drawing.Size(159, 100);
             this.sortedFruitListBox.TabIndex = 4;
             this.sortedFruitListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(340, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 17);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Sorted Alphabetically:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(43, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "From Text File:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.sortedFruitListBox);
             this.Controls.Add(this.originalWordListBox);
             this.Controls.Add(this.label1);
@@ -109,6 +131,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox originalWordListBox;
         private System.Windows.Forms.ListBox sortedFruitListBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
