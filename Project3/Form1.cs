@@ -64,6 +64,16 @@ namespace Project3
             {
                 MessageBox.Show(ex.Message);
             }
+
+            //var lines = File.ReadAllLines("fruitnames.txt");
+
+            //for (int i = 0; i < lines.Length; i++)
+            {
+                //var fields = lines[i].Split(' ');
+                //sortedFruitListBox.Items.Add(fields);
+
+            }
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -74,6 +84,16 @@ namespace Project3
         private void originalWordListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
     
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

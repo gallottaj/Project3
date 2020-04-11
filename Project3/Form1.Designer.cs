@@ -32,6 +32,7 @@
             this.fruitsListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.originalWordListBox = new System.Windows.Forms.ListBox();
+            this.sortedFruitListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // showButton
@@ -73,17 +74,29 @@
             this.originalWordListBox.TabIndex = 3;
             this.originalWordListBox.SelectedIndexChanged += new System.EventHandler(this.originalWordListBox_SelectedIndexChanged);
             // 
+            // sortedFruitListBox
+            // 
+            this.sortedFruitListBox.FormattingEnabled = true;
+            this.sortedFruitListBox.ItemHeight = 16;
+            this.sortedFruitListBox.Location = new System.Drawing.Point(475, 120);
+            this.sortedFruitListBox.Name = "sortedFruitListBox";
+            this.sortedFruitListBox.Size = new System.Drawing.Size(257, 84);
+            this.sortedFruitListBox.TabIndex = 4;
+            this.sortedFruitListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.sortedFruitListBox);
             this.Controls.Add(this.originalWordListBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fruitsListBox);
             this.Controls.Add(this.showButton);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,6 +108,7 @@
         private System.Windows.Forms.ListBox fruitsListBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox originalWordListBox;
+        private System.Windows.Forms.ListBox sortedFruitListBox;
     }
 }
 
