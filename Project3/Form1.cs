@@ -27,23 +27,36 @@ namespace Project3
         {
             int count = 0;
             string line;
+
+
+
             System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\gallo\source\repos\Project3\Project3\bin\Debug\fruitnames.txt");
             List<string> list = new List<string>();
 
-            while ((line = file.ReadLine()) !=null)
+            while ((line = file.ReadLine()) != null)
             {
-            originalWordListBox.Items.Add(line);
-            list.Add(line);
-            count++;
+                originalWordListBox.Items.Add(line);
+                list.Add(line);
+                count++;
             }
 
             string[] fruits = list.ToArray();
             Array.Sort(fruits);
 
+
             foreach (string item in fruits)
             {
                 sortedFruitListBox.Items.Add(item);
             }
+
+            var sorted = fruits.OrderBy(n => n.Length);
+            var shortest = sorted.FirstOrDefault();
+            var longest = sorted.LastOrDefault();
+
+            {
+                longestWordListBox.Items.Add(longest);
+            }
+
 
             try
             {

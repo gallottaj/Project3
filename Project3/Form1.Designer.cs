@@ -35,6 +35,7 @@
             this.sortedFruitListBox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.longestWordListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // showButton
@@ -104,11 +105,21 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "From Text File:";
             // 
+            // longestWordListBox
+            // 
+            this.longestWordListBox.FormattingEnabled = true;
+            this.longestWordListBox.ItemHeight = 16;
+            this.longestWordListBox.Location = new System.Drawing.Point(603, 120);
+            this.longestWordListBox.Name = "longestWordListBox";
+            this.longestWordListBox.Size = new System.Drawing.Size(120, 84);
+            this.longestWordListBox.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.longestWordListBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.sortedFruitListBox);
@@ -133,6 +144,7 @@
         private System.Windows.Forms.ListBox sortedFruitListBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox longestWordListBox;
     }
 }
 
