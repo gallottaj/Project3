@@ -28,8 +28,7 @@ namespace Project3
             int count = 0;
             string line;
 
-
-
+            //original words
             System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\gallo\source\repos\Project3\Project3\bin\Debug\fruitnames.txt");
             List<string> list = new List<string>();
 
@@ -49,6 +48,7 @@ namespace Project3
                 sortedFruitListBox.Items.Add(item);
             }
 
+            //longest length
             var sorted = fruits.OrderBy(n => n.Length);
             var shortest = sorted.FirstOrDefault();
             var longest = sorted.LastOrDefault();
@@ -57,7 +57,7 @@ namespace Project3
                 longestWordListBox.Items.Add(longest);
             }
 
-
+            //lower case fruits
             try
             {
                 string fruitName;

@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.longestWordListBox = new System.Windows.Forms.ListBox();
+            this.mostVowelsListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // showButton
@@ -114,11 +115,21 @@
             this.longestWordListBox.Size = new System.Drawing.Size(120, 84);
             this.longestWordListBox.TabIndex = 7;
             // 
+            // mostVowelsListBox
+            // 
+            this.mostVowelsListBox.FormattingEnabled = true;
+            this.mostVowelsListBox.ItemHeight = 16;
+            this.mostVowelsListBox.Location = new System.Drawing.Point(603, 307);
+            this.mostVowelsListBox.Name = "mostVowelsListBox";
+            this.mostVowelsListBox.Size = new System.Drawing.Size(120, 84);
+            this.mostVowelsListBox.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.mostVowelsListBox);
             this.Controls.Add(this.longestWordListBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -145,6 +156,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox longestWordListBox;
+        private System.Windows.Forms.ListBox mostVowelsListBox;
     }
 }
 
