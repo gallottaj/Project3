@@ -25,6 +25,26 @@ namespace Project3
 
         private void showButton_Click(object sender, EventArgs e)
         {
+            int count = 0;
+            string line;
+            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\gallo\source\repos\Project3\Project3\bin\Debug\fruitnames.txt");
+            List<string> list = new List<string>();
+
+            while ((line = file.ReadLine()) !=null)
+            {
+            originalWordListBox.Items.Add(line);
+            list.Add(line);
+            count++;
+            }
+
+            string[] fruits = list.ToArray();
+            Array.Sort(fruits);
+
+            foreach (string item in fruits)
+            {
+                sortedFruitListBox.Items.Add(item);
+            }
+
             try
             {
                 string fruitName;
@@ -49,13 +69,16 @@ namespace Project3
                 string originalFruitName;
                 StreamReader inputFile;
                 inputFile = File.OpenText("fruitnames.txt");
+              
+
                 originalWordListBox.Items.Clear();
 
                 while (!inputFile.EndOfStream)
                 {
                     originalFruitName = inputFile.ReadLine();
                     originalWordListBox.Items.Add(originalFruitName);
-                }
+
+                    }
 
                 inputFile.Close();
             }
@@ -65,18 +88,9 @@ namespace Project3
                 MessageBox.Show(ex.Message);
             }
 
-            //var lines = File.ReadAllLines("fruitnames.txt");
-
-            //for (int i = 0; i < lines.Length; i++)
-            {
-                //var fields = lines[i].Split(' ');
-                //sortedFruitListBox.Items.Add(fields);
-
-            }
-
         }
 
-        private void label1_Click(object sender, EventArgs e)
+private void label1_Click(object sender, EventArgs e)
         {
 
         }
